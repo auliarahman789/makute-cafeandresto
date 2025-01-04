@@ -4,19 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 function Navbar() {
-    const [isSidebar, setIsSidebar] = useState(false);
 
-    const [linkhover, setLinkhover] = useState(0);
-
-    const [xbutton, setXbutton] = useState(false);
-    const handleX = () => {
-        // Set xbutton to true after 0.3 seconds
-        setTimeout(() => {
-            setXbutton(true);
-        }, 300);
-    };
-
-    const [isMenuHover, setIsMenuHover] = useState(false);
     const [scrollLocation, setScrollLocation] = useState(0);
     const [prevScrollLocation, setPrevScrollLocation] = useState(0);
     const [scrollDirection, setScrollDirection] = useState<string | null>(null);
@@ -47,16 +35,6 @@ function Navbar() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [prevScrollLocation]);
-
-    const OpenSidebar = () => {
-        setIsSidebar(true);
-        handleX();
-    };
-
-    const CloseSidebar = () => {
-        setIsSidebar(false);
-        setXbutton(false);
-    };
 
     return (
         <>
