@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const plugin = require('tailwindcss/plugin')
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,16 +19,7 @@ export default {
       }
     },
   },
-  plugins: [plugin(function ({ matchUtilities, theme }) {
-    matchUtilities(
-      {
-        'text-shadow': (value: string) => ({
-          textShadow: value,
-        }),
-      },
-      { values: theme('textShadow') }
-    )
-  })
+  plugins: [
   ],
 
 } satisfies Config;
