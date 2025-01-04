@@ -19,7 +19,7 @@ function Heroes() {
                 <div className="w-full h-screen flex flex-col">
                     <div className=" 2xl:px-[10%] h-screen inset-0 flex md:flex-row flex-col items-end w-full px-[4%] md:py-0 py-[50%] ">
                         <div className="text-white w-full flex flex-col items-start  text-start md:text-[66px] text-[36px] font-bold md:leading-[65px] leading-[28px] md:mb-0 mb-5">
-                            <h1 className="light-text text-white text-shadow-lg shadow-black uppercase ">
+                            <h1 className="light-text text-white [text-shadow:_0_4px_4px_rgb(0_0_0_/_0.8)] uppercase ">
                                 Mak Ute Cafe & Resto
                             </h1>
                         </div>

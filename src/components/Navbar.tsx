@@ -16,7 +16,7 @@ function Navbar() {
                     <Image className=" text-black rounded-full" width={80} height={80} src={"/icon1.jpg"} alt={"logo mak ute"}>
 
                     </Image>
-                    <div className="flex gap-12 light-text text-white text-2xl text-shadow-sm shadow-black font-semibold uppercase">
+                    <div className="flex gap-12 light-text text-white text-2xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] font-semibold uppercase">
                         <div>
                             <a
                                 className="hover:text-yellow-500 duration-200 "
