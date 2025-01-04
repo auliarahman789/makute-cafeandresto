@@ -23,7 +23,7 @@ export default {
   plugins: [plugin(function ({ matchUtilities, theme }) {
     matchUtilities(
       {
-        'text-shadow': (value: any) => ({
+        'text-shadow': (value: string) => ({
           textShadow: value,
         }),
       },
