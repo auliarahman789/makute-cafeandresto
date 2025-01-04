@@ -5,50 +5,13 @@ import Image from "next/image";
 
 function Navbar() {
 
-    const [scrollLocation, setScrollLocation] = useState(0);
-    const [prevScrollLocation, setPrevScrollLocation] = useState(0);
-    const [scrollDirection, setScrollDirection] = useState<string | null>(null);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollLocation = window.scrollY;
-            setScrollLocation(currentScrollLocation);
-
-            // Check if scrollLocation is decreasing
-            if (currentScrollLocation < prevScrollLocation) {
-                // Scroll location is decreasing
-                setScrollDirection("up");
-            } else if (currentScrollLocation > prevScrollLocation) {
-                // Scroll location is increasing
-                setScrollDirection("down");
-            }
-
-            // Update prevScrollLocation with currentScrollLocation
-            setPrevScrollLocation(currentScrollLocation);
-        };
-
-        // Add event listener when component mounts
-        window.addEventListener("scroll", handleScroll);
-
-        // Remove event listener when component unmounts
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [prevScrollLocation]);
 
     return (
         <>
             <div className="fixed w-full z-50  ">
                 <div
-                    className={`absolute w-full  bg-white  px-[4%] 2xl:px-[5%] flex justify-between items-center md:py-[1%] py-2 duration-200 
-      ${scrollLocation >= 100
-                            ? "bg-[#000820]"
-                            : "md:bg-transparent bg-[#000820] bg-opacity-40"
-                        }
-      ${scrollLocation >= 380 && scrollDirection == "down"
-                            ? "-translate-y-[90px]"
-                            : ""
-                        }
+                    className={`absolute w-full md:bg-transparent bg-[#000820] bg-opacity-40   px-[4%] 2xl:px-[5%] flex justify-between items-center md:py-[1%] py-2 duration-200 
+     
       `}
                 >
 
