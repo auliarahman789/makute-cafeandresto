@@ -29,9 +29,9 @@ function Heroes() {
                     </div>
 
                     <div className="w-full pt-24 h-[20%] flex flex-col items-center">
-                        <a href="#menu">
+                        <a href="#kegiatan">
                             <svg
-                                className="hover:fill-yellow-500 duration-150"
+                                className="  duration-150"
                                 width="48"
                                 height="28"
                                 viewBox="0 0 48 28"
@@ -42,7 +42,7 @@ function Heroes() {
                                     fillRule="evenodd"
                                     clipRule="evenodd"
                                     d="M-6.48499e-05 -2.09815e-06L24.5903 9.14421L48 0.439014L24.1936 27.4308L-6.48499e-05 -2.09815e-06Z"
-                                    fill="black" />
+                                    fill="#faca15" />
                             </svg>
                         </a>
                     </div>

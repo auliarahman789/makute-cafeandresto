@@ -1,5 +1,6 @@
 import { Component } from "@/components/FirstCaroulsel";
 import Heroes from "@/components/Heroes";
+import MenuSection from "@/components/MenuSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,12 @@ export default function Home() {
         <div className="flex  min-h-screen max-w-screen flex-col bg-white rounded-md">
           <Component />
         </div>
+      </main>
+      <main
+        className="flex  min-h-screen  flex-col bg-white px-4 py-4 backdrop-blur-md"
+        id="menu"
+      >
+        <MenuSection />
       </main>
     </main>
   );

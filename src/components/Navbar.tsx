@@ -19,15 +19,15 @@ function Navbar() {
                     <div className="flex gap-12 light-text text-black text-2xl font-semibold uppercase">
                         <div>
                             <a
-                                className="hover:text-yellow-500 duration-200 "
-                                href="/menu"
+                                className="hover:text-yellow-300 duration-200 "
+                                href="#menu"
                             >
                                 MENU
                             </a>
                         </div>
                         <div>
                             <a
-                                className="hover:text-yellow-500 duration-200 "
+                                className="hover:text-yellow-300 duration-200 "
                                 href="https://wa.me/6282113469090"
                             >
                                 CONTACT US
