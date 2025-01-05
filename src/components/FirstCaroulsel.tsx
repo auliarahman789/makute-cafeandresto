@@ -5,7 +5,7 @@ import { Carousel } from "flowbite-react";
 export function Component() {
     return (
 
-        <div className="grid h-screen grid-cols-2 gap-4 ">
+        <div className="grid  md:h-[500px] h-screen grid-cols-1 md:grid-cols-2 gap-4 ">
             <Carousel pauseOnHover>
                 <img src="kegiatan1.jpg" alt="..." />
                 <img src="kegiatan2.jpg" alt="..." />
