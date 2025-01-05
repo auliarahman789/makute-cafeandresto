@@ -6,9 +6,9 @@ function Navbar() {
 
     return (
         <>
-            <div className="fixed w-full z-50  ">
+            <div className="fixed w-full z-50   ">
                 <div
-                    className={`absolute w-full md:bg-transparent bg-[#000820] bg-opacity-40   px-[4%] 2xl:px-[5%] flex justify-between items-center md:py-[1%] py-2 duration-200 
+                    className={`absolute w-full border-b-2 border-stone-400 bg-white px-[10%] flex justify-between items-center  duration-200 
      
       `}
                 >
@@ -16,7 +16,7 @@ function Navbar() {
                     <Image className=" text-black rounded-full" width={80} height={80} src={"/icon1.jpg"} alt={"logo mak ute"}>
 
                     </Image>
-                    <div className="flex gap-12 light-text text-white text-2xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)] font-semibold uppercase">
+                    <div className="flex gap-12 light-text text-black text-2xl font-semibold uppercase">
                         <div>
                             <a
                                 className="hover:text-yellow-500 duration-200 "

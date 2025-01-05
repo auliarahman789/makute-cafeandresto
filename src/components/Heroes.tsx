@@ -5,15 +5,17 @@ function Heroes() {
 
 
     return (
-        <div className="h-screen w-full relative overflow-hidden">
+        <div className="h-screen w-full relative overflow-hidden ">
+
             <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center "
                 style={{
-                    backgroundImage: "url('/cover.png')",
+                    backgroundImage: "url('/cover5.png')",
                     backgroundPosition: "bottom",
                     backgroundSize: "cover",
                 }}
             ></div>
+
             <div
                 className="w-full h-full absolute">
                 <div className="w-full h-screen flex flex-col">
@@ -26,7 +28,7 @@ function Heroes() {
 
                     </div>
 
-                    <div className="w-full pt-14 h-[20%] flex flex-col items-center">
+                    <div className="w-full pt-24 h-[20%] flex flex-col items-center">
                         <a href="#menu">
                             <svg
                                 className="hover:fill-yellow-500 duration-150"
@@ -40,7 +42,7 @@ function Heroes() {
                                     fillRule="evenodd"
                                     clipRule="evenodd"
                                     d="M-6.48499e-05 -2.09815e-06L24.5903 9.14421L48 0.439014L24.1936 27.4308L-6.48499e-05 -2.09815e-06Z"
-                                    fill="yellow" />
+                                    fill="black" />
                             </svg>
                         </a>
                     </div>
