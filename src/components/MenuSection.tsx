@@ -14,7 +14,7 @@ function MenuSection() {
 
                     <div className="flex flex-wrap justify-center items-center">
                         <div className=" flex flex-col justify-center items-center ">
-                            <h1 className="text-[24px] text-yellow-300  font-extrabold">
+                            <h1 className="text-[24px] text-yellow-300  font-medium">
                                 MENU
                             </h1>
                             <h1 className="text-[34px] text-black  font-extrabold">
