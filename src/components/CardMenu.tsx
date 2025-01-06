@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CardMenu({ nama, foto }: { nama: any, foto: any }) {
+function CardMenu({ nama, foto }: { nama: string, foto: string }) {
     return (
         <>
 

@@ -4,7 +4,7 @@ import CardMenu from "./CardMenu";
 
 
 function MenuSection() {
-    const [hoveredImage, setHoveredImage] = useState<any>();
+    const [hoveredImage, setHoveredImage] = useState<unknown>();
     return (
         <section className=" md:py-2">
 
