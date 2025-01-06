@@ -1,4 +1,5 @@
 import { Component } from "@/components/FirstCaroulsel";
+import Galery from "@/components/Galery";
 import Heroes from "@/components/Heroes";
 import MenuSection from "@/components/MenuSection";
 import Testimoni from "@/components/Testimoni";
@@ -44,6 +45,12 @@ export default function Home() {
         id="testimoni"
       >
         <Testimoni />
+      </main>
+      <main
+        className="flex  min-h-screen  flex-col bg-white px-4 py-4 backdrop-blur-md"
+        id="galeri"
+      >
+        <Galery />
       </main>
     </main>
   );

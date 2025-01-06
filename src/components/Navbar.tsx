@@ -57,9 +57,25 @@ function Navbar() {
                         <div>
                             <a
                                 className="hover:text-yellow-300 duration-200 "
+                                href="#kegiatan"
+                            >
+                                EVENTS
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                className="hover:text-yellow-300 duration-200 "
                                 href="#menu"
                             >
                                 MENU
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                className="hover:text-yellow-300 duration-200 "
+                                href="#testimoni"
+                            >
+                                TESTIMONY
                             </a>
                         </div>
                         <div>
