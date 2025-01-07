@@ -21,7 +21,7 @@ function Testimoni() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex md:flex flex-col gap-10 pt-10 justify-center">
+                    <div className="flex  md:flex-row flex-col gap-10 pt-10 justify-center">
                         <video width="400" height="720" poster="thumbnail1.png" controls preload="none">
                             <source src="/makUteOpening.mp4" type="video/mp4" />
                             <track
