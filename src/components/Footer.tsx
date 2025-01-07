@@ -9,15 +9,14 @@ function Footer() {
                 </div>
                 <div className="flex w-full justify-center">
                     <div className="w-2/6 text-black ">
-                        <p className="text-center leading-5 py-5 text-[20px]">
-                            TANJUNG PANDAN, INDONESIA
+                        <p className="text-center leading-5 py-5 text-[20px] font-semibold">
+                            SIJUK, INDONESIA
                         </p>
                     </div>
                 </div>
                 <div className="w-full h-[2px] bg-black"></div>
-                <div className="grid md:grid-cols-5 py-[1%] md:gap-5 gap-5 grid-cols-1 items-center  text-[16px] text-black">
+                <div className="grid md:grid-cols-5 py-[1%] md:gap-5 gap-5 grid-cols-2 items-center  text-[16px] text-black">
                     <Image className=" text-black rounded-full" width={150} height={150} src={"/icon1.jpg"} alt={"logo mak ute"}>
-
                     </Image>
                     <div className="md:flex flex flex-col  justify-start ">
                         <a

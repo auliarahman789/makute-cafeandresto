@@ -18,7 +18,7 @@ export default function Home() {
         id="kegiatan"
       >
         <div className="flex flex-wrap justify-center items-center">
-          <div className=" flex flex-col justify-center items-center ">
+          <div className=" flex flex-col justify-center text-center items-center ">
             <h1 className="text-[24px] text-yellow-300  font-medium">
               EVENTS
             </h1>

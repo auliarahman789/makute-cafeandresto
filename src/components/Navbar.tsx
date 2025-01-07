@@ -37,7 +37,7 @@ function Navbar() {
         <>
             <div className="fixed w-full z-50">
                 <div
-                    className={`absolute w-full border-b-2 border-stone-400 bg-white px-[10%] flex justify-between items-center  duration-200 
+                    className={`absolute w-full border-b-2 border-stone-400 bg-white md:px-[10%] flex justify-between items-center  duration-200 
       ${scrollLocation >= 100
                             ? "bg-white"
                             : " bg-white "
@@ -53,10 +53,10 @@ function Navbar() {
                     <Image className=" text-black rounded-full" width={80} height={80} src={"/icon1.jpg"} alt={"logo mak ute"}>
 
                     </Image>
-                    <div className="flex gap-12 light-text text-black text-2xl font-semibold uppercase">
+                    <div className="flex md:gap-12 gap-2 light-text text-black md:text-2xl text-md font-semibold uppercase">
                         <div>
                             <a
-                                className="hover:text-yellow-300 duration-200 "
+                                className="hover:text-yellow-300 duration-200 underline "
                                 href="#kegiatan"
                             >
                                 EVENTS
@@ -64,7 +64,7 @@ function Navbar() {
                         </div>
                         <div>
                             <a
-                                className="hover:text-yellow-300 duration-200 "
+                                className="hover:text-yellow-300 duration-200 underline"
                                 href="#menu"
                             >
                                 MENU
@@ -72,7 +72,7 @@ function Navbar() {
                         </div>
                         <div>
                             <a
-                                className="hover:text-yellow-300 duration-200 "
+                                className="hover:text-yellow-300 duration-200 underline"
                                 href="#testimoni"
                             >
                                 TESTIMONY
@@ -80,7 +80,7 @@ function Navbar() {
                         </div>
                         <div>
                             <a
-                                className="hover:text-yellow-300 duration-200 "
+                                className="hover:text-yellow-300 duration-200 underline"
                                 href="https://wa.me/6282113469090"
                             >
                                 CONTACT US
