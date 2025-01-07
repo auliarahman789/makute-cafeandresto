@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CardVideo({ vid, thumb, desc }: { vid: string, thumb: string, desc: any }) {
+function CardVideo({ vid, thumb, desc }: { vid: string, thumb: string, desc: string }) {
     return (
         <>
 
