@@ -1,3 +1,4 @@
+import AboutUs from "@/components/AboutUs";
 import { Component } from "@/components/FirstCaroulsel";
 import Galery from "@/components/Galery";
 import Heroes from "@/components/Heroes";
@@ -12,6 +13,13 @@ export default function Home() {
         id="/"
       >
         <Heroes />
+      </main>
+      <main
+        className="flex  min-h-screen  flex-col bg-white px-4 py-4 backdrop-blur-md"
+        id="about"
+      >
+        <AboutUs />
+
       </main>
       <main
         className="flex  min-h-screen max-w-screen flex-col bg-white px-4 py-4 backdrop-blur-md gap-10"

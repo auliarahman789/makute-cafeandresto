@@ -31,35 +31,35 @@ function MenuSection() {
                             onMouseEnter={() => setHoveredImage(0)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
-                            <CardMenu nama={'Kopi'} foto={'/cardMenu1.jpg'} />
+                            <CardMenu nama={'Kopi'} foto={'/cardMenu1.jpg'} desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo. Nam elementum at ex ut elementum.'} />
                         </div>
                         <div className={` ${hoveredImage === 1 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(1)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
-                            <CardMenu nama={'Kopi'} foto={'/cardMenu2.jpg'} />
+                            <CardMenu nama={'Kopi'} foto={'/cardMenu2.jpg'} desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo. Nam elementum at ex ut elementum.'} />
                         </div>
                         <div className={` ${hoveredImage === 2 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(2)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
-                            <CardMenu nama={'Chicken'} foto={'/cardMenu3.jpg'} />
+                            <CardMenu nama={'Chicken'} foto={'/cardMenu3.jpg'} desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo. Nam elementum at ex ut elementum.'} />
                         </div>
                         <div className={` ${hoveredImage === 3 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(3)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
-                            <CardMenu nama={'Kopi Durin'} foto={'/cardMenu4.jpg'} />
+                            <CardMenu nama={'Kopi Durin'} foto={'/cardMenu4.jpg'} desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo. Nam elementum at ex ut elementum.'} />
                         </div>
                         <div className={` ${hoveredImage === 4 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(4)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
-                            <CardMenu nama={'Makanan'} foto={'/cardMenu5.jpg'} />
+                            <CardMenu nama={'Makanan'} foto={'/cardMenu5.jpg'} desc={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo. Nam elementum at ex ut elementum.'} />
                         </div>
 
                     </div>

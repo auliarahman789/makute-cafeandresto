@@ -59,7 +59,7 @@ function Heroes() {
                     </div>
 
                     <div className="w-full pt-24 h-[20%] flex flex-col items-center">
-                        <a href="#kegiatan">
+                        <a href="#about">
                             <svg
                                 className="  duration-150"
                                 width="48"

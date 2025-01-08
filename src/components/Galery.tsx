@@ -25,7 +25,7 @@ function Galery() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row px-[4%] py-[4%] justify-center gap-6">
+                    <div className="grid md:grid-cols-5 grid-cols-2 px-[4%] py-[4%] justify-center gap-6">
                         <div className={` ${hoveredImage === 0 ? 'grayscale-0' : 'grayscale'
                             }`}
                             onMouseEnter={() => setHoveredImage(0)}
