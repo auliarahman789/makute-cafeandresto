@@ -37,7 +37,7 @@ function Navbar() {
         <>
             <div className="fixed w-full z-50">
                 <div
-                    className={`absolute w-full border-b-2 border-stone-400 bg-white md:px-[10%] flex justify-between items-center  duration-200 
+                    className={`absolute w-full border-b-2 border-stone-400 bg-white md:px-[10%] px-[1%] flex justify-between items-center  duration-200 
       ${scrollLocation >= 100
                             ? "bg-white"
                             : " bg-white "
@@ -78,14 +78,14 @@ function Navbar() {
                                 TESTIMONY
                             </a>
                         </div>
-                        <div>
+                        {/* <div>
                             <a
                                 className="hover:text-yellow-300 duration-200 underline"
                                 href="https://wa.me/6282113469090"
                             >
                                 CONTACT US
                             </a>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

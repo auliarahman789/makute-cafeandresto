@@ -8,7 +8,7 @@ const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mak Ute Cafe And Resto",
-  description: "Lead your business to digital transformation",
+  description: "Mak Ute Cafe And Resto",
 };
 
 export default function RootLayout({

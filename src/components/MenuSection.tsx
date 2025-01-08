@@ -25,36 +25,36 @@ function MenuSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row px-[4%] py-[4%] justify-center gap-6">
-                        <div className={` ${hoveredImage === 0 ? 'grayscale-0' : 'grayscale'
+                    <div className="grid grid-cols-1 md:grid-cols-3 px-[4%] py-[4%] justify-center gap-6">
+                        <div className={` ${hoveredImage === 0 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(0)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
                             <CardMenu nama={'Kopi'} foto={'/cardMenu1.jpg'} />
                         </div>
-                        <div className={` ${hoveredImage === 1 ? 'grayscale-0' : 'grayscale'
+                        <div className={` ${hoveredImage === 1 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(1)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
                             <CardMenu nama={'Kopi'} foto={'/cardMenu2.jpg'} />
                         </div>
-                        <div className={` ${hoveredImage === 2 ? 'grayscale-0' : 'grayscale'
+                        <div className={` ${hoveredImage === 2 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(2)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
                             <CardMenu nama={'Chicken'} foto={'/cardMenu3.jpg'} />
                         </div>
-                        <div className={` ${hoveredImage === 3 ? 'grayscale-0' : 'grayscale'
+                        <div className={` ${hoveredImage === 3 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(3)}
                             onMouseLeave={() => setHoveredImage(null)} >
 
                             <CardMenu nama={'Kopi Durin'} foto={'/cardMenu4.jpg'} />
                         </div>
-                        <div className={` ${hoveredImage === 4 ? 'grayscale-0' : 'grayscale'
+                        <div className={` ${hoveredImage === 4 ? 'grayscale-0' : 'grayscale-0'
                             }`}
                             onMouseEnter={() => setHoveredImage(4)}
                             onMouseLeave={() => setHoveredImage(null)} >
