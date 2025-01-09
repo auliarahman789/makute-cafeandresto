@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 function AboutUs() {
 
     return (
@@ -22,7 +22,34 @@ function AboutUs() {
                             </div>
                         </div>
                     </div>
-
+                    <div className="pt-[4%] flex justify-between   w-full items-center ">
+                        <Image
+                            src={"/about.png"}
+                            alt={"Gambar Lokasi Kerupuk Cap Keluarga"}
+                            height={300}
+                            width={400}
+                            className="rounded-sm "
+                        />
+                        <p className="text-medium text-black text-center w-[50%]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo.
+                            Nam elementum at ex ut elementum.
+                        </p>
+                    </div>
+                    <div className="pb-[4%] flex justify-between   w-full items-center ">
+                        <p className="text-medium text-black text-center w-[50%]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse a lorem et diam rhoncus mattis. Ut commodo porta ipsum et commodo.
+                            Nam elementum at ex ut elementum.
+                        </p>
+                        <Image
+                            src={"/about2.png"}
+                            alt={"Gambar Lokasi Kerupuk Cap Keluarga"}
+                            height={300}
+                            width={400}
+                            className="rounded-sm justify-end flex items-end"
+                        />
+                    </div>
                 </div>
 
             </div>
