@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 function CardMenu({
   nama,
@@ -10,8 +10,6 @@ function CardMenu({
   foto: string;
   desc: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <div className="flex flex-col h-[400px] overflow-hidden rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
       {/* Image - fixed height */}

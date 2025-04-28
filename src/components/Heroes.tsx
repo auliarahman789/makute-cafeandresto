@@ -54,7 +54,7 @@ function Hero() {
         {images.map((image, index) => {
           // Determine optimal background styling based on image type and screen
           let bgPosition = "center";
-          let bgSize = "cover";
+          const bgSize = "cover";
 
           // Special handling for portrait images on wide screens
           if (image.type === "portrait" && aspectRatio > 1.2) {

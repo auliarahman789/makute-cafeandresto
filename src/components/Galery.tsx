@@ -26,11 +26,6 @@ function Gallery() {
     { src: "/galery10.png", alt: "Gallery Image 10" },
   ];
 
-  // Get all images based on showMore state
-  const galleryImages = showMore
-    ? [...initialGalleryImages, ...additionalGalleryImages]
-    : initialGalleryImages;
-
   // Intersection Observer to trigger animations when section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
