@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   // Basic metadata
   title: "Mak Ute Cafe & Resto | Authentic Indonesian Cuisine in Belitung",
   description:
-    "Experience authentic Indonesian cuisine with ocean views at Mak Ute Cafe & Resto in Sijuk, Belitung. Fresh seafood, traditional dishes, and coffee in a relaxing beachfront setting.",
+    "Experience authentic Indonesian cuisine at Mak Ute Cafe & Resto in Sijuk, Belitung.",
 
   // Viewport settings
   viewport: "width=device-width, initial-scale=1",
@@ -20,11 +20,10 @@ export const metadata: Metadata = {
     "Mak Ute Cafe",
     "Belitung restaurant",
     "Indonesian cuisine",
-    "seafood Belitung",
-    "beachfront cafe",
+    "cafe in Belitung",
+    "cafe in Sijuk",
     "Sijuk restaurant",
     "traditional Indonesian food",
-    "Tanjung Kelayang",
     "best cafe Belitung",
     "authentic local cuisine",
   ],
@@ -33,16 +32,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "", // Replace with your actual domain
-    title: "Mak Ute Cafe & Resto | Beachfront Dining in Belitung",
+    title: "Mak Ute Cafe & Resto | Cafe & Resto in Belitung",
     description:
-      "Enjoy fresh seafood and authentic Indonesian cuisine with stunning ocean views at Mak Ute Cafe & Resto in Belitung Island.",
+      "Enjoy fresh authentic Indonesian cuisine at Mak Ute Cafe & Resto in Belitung Island.",
     siteName: "Mak Ute Cafe & Resto",
     images: [
       {
         url: "icon1.jpg", // Replace with actual image path
         width: 1200,
         height: 630,
-        alt: "Mak Ute Cafe & Resto oceanfront view",
+        alt: "Mak Ute Cafe & Resto ",
       },
     ],
     locale: "en_US",
