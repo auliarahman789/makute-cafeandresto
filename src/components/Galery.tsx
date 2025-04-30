@@ -1,7 +1,6 @@
 // Gallery.tsx
 "use client";
 import React, { useState, useEffect } from "react";
-import CardGallery from "./CardGallery";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Gallery() {
