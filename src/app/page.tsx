@@ -20,10 +20,7 @@ export default function Home() {
       </section>
 
       {/* Events Section */}
-      <section
-        id="kegiatan"
-        className="min-h-screen py-16 px-4 md:px-8 lg:px-16"
-      >
+      <section id="events" className="min-h-screen py-16 px-4 md:px-8 lg:px-16">
         <div className="flex flex-col items-center mb-12">
           <h3 className="text-xl md:text-2xl text-yellow-300 font-medium tracking-wide">
             EVENTS
@@ -46,14 +43,14 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section
-        id="testimoni"
+        id="testimony"
         className="min-h-screen py-16 px-4 md:px-8 lg:px-16"
       >
         <Testimonials />
       </section>
 
       {/* Gallery Section */}
-      <section id="galeri" className="min-h-screen py-16 px-4 md:px-8 lg:px-16">
+      <section id="galeri" className="min-h-screen  ">
         <Gallery />
       </section>
     </main>

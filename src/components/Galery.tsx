@@ -8,6 +8,10 @@ function Gallery() {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const [fullscreenImage, setFullscreenImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
 
   // Initial and additional gallery images with proper typing
   const initialGalleryImages = [
@@ -48,6 +52,29 @@ function Gallery() {
       }
     };
   }, []);
+
+  // Handle escape key to exit fullscreen mode
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && fullscreenImage) {
+        setFullscreenImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscKey);
+
+    // Prevent scrolling when in fullscreen mode
+    if (fullscreenImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleEscKey);
+      document.body.style.overflow = "auto";
+    };
+  }, [fullscreenImage]);
 
   // Animation variants
   const containerVariants = {
@@ -90,12 +117,18 @@ function Gallery() {
     }
   };
 
+  // Handle image click to show fullscreen
+  const handleImageClick = (image: { src: string; alt: string }) => {
+    setFullscreenImage(image);
+  };
+
+  // Handle click to exit fullscreen
+  const handleFullscreenClick = () => {
+    setFullscreenImage(null);
+  };
+
   return (
     <section className="py-16 md:py-24 overflow-hidden relative" id="gallery">
-      {/* Decorative accent similar to Heroes component */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-yellow-200 rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-yellow-300 rounded-full opacity-20 blur-3xl"></div>
-
       {/* Section Header - Styled to match Hero section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -128,21 +161,25 @@ function Gallery() {
             <motion.div
               key={`initial-${index}`}
               variants={itemVariants}
-              className={`rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:z-10 hover:shadow-xl ${
+              className={`rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:z-10 hover:shadow-xl cursor-pointer ${
                 hoveredImage === index ? "scale-105" : ""
               }`}
               onMouseEnter={() => setHoveredImage(index)}
               onMouseLeave={() => setHoveredImage(null)}
+              onClick={() => handleImageClick(image)}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.3 },
               }}
             >
-              <CardGallery
-                foto={image.src}
-                alt={image.alt}
-                isActive={hoveredImage === index}
-              />
+              {/* Pass forceFullColor prop to show images in full color */}
+              <div className="w-full h-48 md:h-64 overflow-hidden">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -168,7 +205,7 @@ function Gallery() {
                     delay: index * 0.1,
                     ease: "easeOut",
                   }}
-                  className={`rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:z-10 hover:shadow-xl ${
+                  className={`rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:z-10 hover:shadow-xl cursor-pointer ${
                     hoveredImage === index + initialGalleryImages.length
                       ? "scale-105"
                       : ""
@@ -177,18 +214,19 @@ function Gallery() {
                     setHoveredImage(index + initialGalleryImages.length)
                   }
                   onMouseLeave={() => setHoveredImage(null)}
+                  onClick={() => handleImageClick(image)}
                   whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.3 },
                   }}
                 >
-                  <CardGallery
-                    foto={image.src}
-                    alt={image.alt}
-                    isActive={
-                      hoveredImage === index + initialGalleryImages.length
-                    }
-                  />
+                  <div className="w-full h-48 md:h-64 overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -242,6 +280,64 @@ function Gallery() {
           )}
         </button>
       </motion.div>
+
+      {/* Fullscreen Image View */}
+      <AnimatePresence>
+        {fullscreenImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            onClick={handleFullscreenClick}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-full max-h-full"
+            >
+              <img
+                src={fullscreenImage.src}
+                alt={fullscreenImage.alt}
+                className="max-w-full max-h-[90vh] object-contain"
+              />
+
+              {/* Close button */}
+              <button
+                className="absolute top-4 right-4 bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-300 transition-all duration-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFullscreenImage(null);
+                }}
+                aria-label="Close fullscreen image"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+
+              {/* Image caption */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 text-center">
+                {fullscreenImage.alt}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <style jsx>{`
         @keyframes float {
