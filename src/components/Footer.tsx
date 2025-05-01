@@ -69,12 +69,7 @@ function Footer() {
                 Opening Hours
               </h4>
               <div className="pl-2 border-l-2 border-yellow-300">
-                <p className="text-gray-700">
-                  Monday - Friday: 10:00 AM - 10:00 PM
-                </p>
-                <p className="text-gray-700">
-                  Saturday - Sunday: 08:00 AM - 10:00 PM
-                </p>
+                <p className="text-gray-700">EVERYDAY : 10:00 AM - 10:00 PM</p>
               </div>
             </div>
 
